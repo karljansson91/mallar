@@ -1,0 +1,21 @@
+version: '3'
+services:
+  finance-be:
+    container_name: finance-be
+    build: .
+    ports:
+      - "8000:8000"
+    command: "adev runserver src/main.py"
+    volumes: 
+      - ./src:/finance/src
+  mongo-db:
+    image: mongo:latest
+    container_name: mongo-db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: data
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js

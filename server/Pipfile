@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]
+python_version = "3.7"
+
+[packages]
+aiohttp = "==3.6.2"
+aiohttp_cors = "==0.7.0"
+pymongo = "==3.10.1"
+pytrends = "==4.7.2"
+
+
+[dev-packages]
+aiohttp-devtools  = "==0.13.1"
