@@ -21,3 +21,6 @@ clean:
 	docker-compose stop
 	docker-compose rm
 	@docker rmi -f $(DOCKER_IMAGES)
+
+prod-build:
+	docker-compose -f docker-compose-prod.yml up --build -d mallar-fe
