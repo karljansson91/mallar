@@ -6,14 +6,11 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - REACT_APP_API_HOST=https://cv-mallar.com/api
+      - REACT_APP_API_HOST=http://cv-mallar.com/api
     ports:
       - 3000:3000
     expose:
       - 3000
-    volumes: 
-      - '.:/app'
-      - '/app/node_modules'
     tty: true
     command: ["npm", "start"]
     
