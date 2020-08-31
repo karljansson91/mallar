@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import { registerUser } from 'api'
 
 
 
@@ -71,13 +72,10 @@ export default () => {
         event.preventDefault()
             // Simple POST request with a JSON body using fetch
 
-        await fetch('http://localhost:8000/user/register', {
-            method: 'POST',
-            body: JSON.stringify({
-                email: event.currentTarget.email.value,
-                password: event.currentTarget.password.value
-            })
-        })
+        await registerUser(
+                event.currentTarget.email.value,
+                event.currentTarget.password.value
+        )
         history.push("/login");
     }
     return (

@@ -18,6 +18,16 @@ const tokenFetch = async (path, method, payload) => {
     }
 }
 
+const registerUser = async (email, password) => {
+    await fetch(`${host}/user/register`, {
+        method: 'POST',
+        body: JSON.stringify({
+            email: email,
+            password: password
+        })
+    })
+}
+
 const loginUser = async (username, password) => {
     let formData = new FormData();
     console.log(process.env)
@@ -145,5 +155,6 @@ export {
     updateExperience,
     deleteExperience,
     addSkill,
-    deleteSkill
+    deleteSkill,
+    registerUser
 }
