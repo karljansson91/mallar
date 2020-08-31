@@ -1,100 +1,90 @@
 import React from 'react';
 
-import Title from './Title';
-import List, { Item } from './List';
+import Title from '../Components/Title';
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 30,
-    paddingLeft: 15,
-    '@media max-width: 400': {
-      paddingTop: 10,
-      paddingLeft: 0,
-    },
-  },
   entryContainer: {
-    marginBottom: 10,
+    margin: "8px 0px",
   },
   date: {
-    fontSize: 11,
+    fontSize: 9,
+    color: '#808080'
   },
-  detailContainer: {
+  descriptionContainer: {
     flexDirection: 'row',
-  },
-  detailLeftColumn: {
-    flexDirection: 'column',
-    marginLeft: 10,
-    marginRight: 10,
-  },
-  detailRightColumn: {
-    flexDirection: 'column',
-    flexGrow: 9,
-  },
-  bulletPoint: {
-    fontSize: 10,
-  },
-  details: {
     fontSize: 10,
   },
   headerContainer: {
     flexDirection: 'row',
-    marginBottom: 10,
+    marginBottom: 6,
   },
   leftColumn: {
     flexDirection: 'column',
-    flexGrow: 9,
   },
   rightColumn: {
     flexDirection: 'column',
     flexGrow: 1,
     alignItems: 'flex-end',
     justifySelf: 'flex-end',
+    fontSize: 9
   },
   title: {
-    fontSize: 11,
-    color: 'black',
+    fontSize: 10,
+    fontWeight: 500,
     textDecoration: 'none',
   },
 });
 
-const ExperienceEntry = ({ company, details, position, date }) => {
-  const title = `${company} | ${position}`;
+const ExperienceEntry = ({ employer, description, title, date }) => {
+  const workTitle = `${employer} | ${title}`;
   return (
     <View style={styles.entryContainer}>
       <View style={styles.headerContainer}>
         <View style={styles.leftColumn}>
-          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.title}>{workTitle}</Text>
         </View>
         <View style={styles.rightColumn}>
           <Text style={styles.date}>{date}</Text>
         </View>
       </View>
-      <List>
-        {details.map((detail, i) => (
-          <Item key={i} style={styles.detailContainer}>
-            {detail}
-          </Item>
-        ))}
-      </List>
+        
+      <Text style={styles.descriptionContainer}>
+        {description}
+      </Text>
     </View>
   );
 };
 
 const Experience = ({experience}) => (
-  <View style={styles.container}>
-    <Title>Experience</Title>
-    {experience.map(({ company, date, details, position }) => (
+  <View>
+    <Title>Arbetshistoria</Title>
+    {experience.map(({ experience_id, employer, start_date, end_date, description, title }) => (
       <ExperienceEntry
-        company={company}
-        date={date}
-        details={details}
-        key={company + position}
-        position={position}
+        employer={employer || 'Arbetsgivare'}
+        date={start_date + ( end_date ? ' - ' + end_date : '')}
+        description={description || 'Beskrivning'}
+        key={experience_id}
+        title={title || 'Titel'}
       />
     ))}
   </View>
 );
+
+Experience.propTypes = {
+  experience: PropTypes.arrayOf(PropTypes.object)
+};
+
+Experience.defaultProps = {
+  experience: [{
+      title: 'Kundtjänst',
+      employer: 'Aspiranterna',
+      startDate: 'Jan 2000',
+      endDate: 'Okt 2005',
+      experience_id: 'id',
+      description: 'Problemlösning och kundkontakt var två ledord för min roll på Aspiranterna. Jag lärde mig det interna butikssystemet utantill och fick en bred förståelse för företagets produkter.'
+  }]
+};
 
 export default Experience;

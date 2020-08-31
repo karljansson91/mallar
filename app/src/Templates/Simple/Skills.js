@@ -1,43 +1,33 @@
 import React from 'react';
-
-import Title from './Title';
-import List, { Item } from './List';
-import { Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Text, StyleSheet } from '@react-pdf/renderer';
+import LeftContainer from '../Components/LeftContainer';
+import Title from '../Components/Title';
+import PropTypes from 'prop-types';
 
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 11,
-    marginBottom: 5,
-  },
-  skills: {
+  details: {
     fontSize: 10,
-    marginBottom: 10,
+    marginBottom: 2,
   },
 });
 
-const SkillEntry = ({ name, skills }) => (
-  <View>
-    <Text style={styles.title}>{name}</Text>
-    <List>
-      {skills.map((skill, i) => (
-        <Item key={i}>{skill}</Item>
+const Skills = ({skills}) => {
+  return (
+    <LeftContainer>
+      <Title>Kompetens</Title>
+      {skills.map(skill => (
+          <Text key={skill} style={styles.details}>{skill}</Text>
       ))}
-    </List>
-  </View>
-);
+    </LeftContainer>
+  )
+};
 
-const Skills = ({skills}) => (
-  <View>
-    <Title>Skills</Title>
-    {skills.map((skill) => (
-      <React.Fragment>
-        <SkillEntry
-          name={skill.title}
-          skills={skill.skills}
-        />
-       </React.Fragment>
-    ))}
-  </View>
-);
+Skills.propTypes = {
+  skills: PropTypes.arrayOf(PropTypes.string),
+};
+
+Skills.defaultProps = {
+  skills: ['Javscript', 'Python', 'Rest API', 'Kafka', 'Ruby'],
+};
 
 export default Skills;

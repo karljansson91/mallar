@@ -1,49 +1,44 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Link, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Text, View, StyleSheet } from '@react-pdf/renderer';
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    borderBottomWidth: 2,
-    borderBottomColor: '#112131',
-    borderBottomStyle: 'solid',
-    alignItems: 'stretch',
-  },
-  detailColumn: {
-    flexDirection: 'column',
-    flexGrow: 9,
-    textTransform: 'uppercase',
-  },
-  linkColumn: {
-    flexDirection: 'column',
-    flexGrow: 2,
-    alignSelf: 'flex-end',
-    justifySelf: 'flex-end',
+    margin: '6px',
   },
   name: {
     fontSize: 24,
+    textAlign: 'center',
+    textTransform: 'uppercase',
+    marginBottom: '4px',
   },
-  subtitle: {
-    fontSize: 10,
-    justifySelf: 'flex-end',
-  },
-  link: {
-    fontSize: 10,
-    color: 'black',
-    textDecoration: 'none',
-    alignSelf: 'flex-end',
-    justifySelf: 'flex-end',
+  role: {
+    fontSize: 16,
+    textAlign: 'center',
+    textTransform: 'uppercase',
+    color: '#282828'
   },
 });
 
-export default ({name, email}) => (
-  <View style={styles.container}>
-    <View style={styles.detailColumn}>
+const Header = ({name, role}) => {
+  return (
+    <View style={styles.container}>
       <Text style={styles.name}>{name}</Text>
+      <Text style={styles.role}>{role}</Text>
     </View>
-    <View style={styles.linkColumn}>
-      <Link style={styles.link}>{email}</Link>
-    </View>
-  </View>
-);
+  )
+}
+
+
+Header.propTypes = {
+  name: PropTypes.string,
+  email: PropTypes.string,
+};
+
+Header.defaultProps = {
+  name: 'Förnamn Efternamn',
+  role: 'Titel',
+};
+
+export default Header;

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54303008-77f0-4529-a49d-d638d854cc78" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/mallar.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.env" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/Datafilter/DataFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/Datafilter/styled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/EpsChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Components/StockBarChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Context/DataContext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Templates/Simple/Education.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Templates/Simple/Education.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Templates/Simple/Experience.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Templates/Simple/Experience.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Templates/Simple/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Templates/Simple/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Templates/Simple/Resume.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Templates/Simple/Resume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Templates/Simple/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Templates/Simple/Skills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Templates/Simple/Title.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Templates/Simple/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Templates/Simple/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Pipfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Pipfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/mongo-init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/cors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/resources/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/resources/eps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/resources/search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/resources/stock.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/resources/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/resources/trends.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="af1488bf-fe9a-49fb-88ca-7a77ad48d13b" />
+  <component name="ProjectId" id="1gbIhKQgdHGBQ6shYMSxp2F0EDE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54303008-77f0-4529-a49d-d638d854cc78" name="Default Changelist" comment="" />
+      <created>1598376990462</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598376990462</updated>
+      <workItem from="1598376992169" duration="19000" />
+    </task>
+    <servers />
+  </component>
+</project>
