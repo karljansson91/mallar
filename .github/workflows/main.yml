@@ -23,7 +23,7 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.ACCESS_TOKEN }}
           repository: karljansson91/mallar
           dockerfile: Dockerfile.prod
           tags: latest
