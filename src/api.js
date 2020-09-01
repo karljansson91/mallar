@@ -5,6 +5,7 @@ const host = process.env.REACT_APP_API_HOST
 
 const tokenFetch = async (path, method, payload) => {
     const cookie = getCookie('mallar')
+    console.log(host)
     const response = await fetch(`${host}${path}`, {
         method: method,
         headers: {
