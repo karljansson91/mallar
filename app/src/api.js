@@ -4,7 +4,6 @@ const host = process.env.REACT_APP_API_HOST
 
 
 const tokenFetch = async (path, method, payload) => {
-    console.log(host)
     const cookie = getCookie('mallar')
     const response = await fetch(`${host}${path}`, {
         method: method,
@@ -31,7 +30,6 @@ const registerUser = async (email, password) => {
 const loginUser = async (username, password) => {
     let formData = new FormData();
     console.log(process.env)
-
     formData.append('username', username);
     formData.append('password', password);
 

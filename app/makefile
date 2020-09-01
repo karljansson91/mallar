@@ -24,3 +24,7 @@ clean:
 
 prod-build:
 	docker-compose -f docker-compose-prod.yml up --build -d mallar-fe
+
+
+prod-start:
+	docker-compose -f docker-compose-prod.yml up -d mallar-fe
