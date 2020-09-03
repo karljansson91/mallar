@@ -23,4 +23,4 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          script: whoami
+          script: docker pull docker.pkg.github.com/karljansson91/mallar/mallar-fe:latest
