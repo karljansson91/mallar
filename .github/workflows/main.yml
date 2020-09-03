@@ -25,4 +25,4 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             docker pull docker.pkg.github.com/karljansson91/mallar/mallar-fe:latest
-            docker run -p 127.0.0.1:80:8080/tcp docker.pkg.github.com/karljansson91/mallar/mallar-fe:latest
+            docker run -p 127.0.0.1:3000:80/tcp docker.pkg.github.com/karljansson91/mallar/mallar-fe:latest
