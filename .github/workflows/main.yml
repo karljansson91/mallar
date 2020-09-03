@@ -10,21 +10,17 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+
+
+  deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Build and push Docker images
-        uses: docker/build-push-action@v1
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
         with:
-          registry:  docker.pkg.github.com
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.ACCESS_TOKEN }}
-          repository: karljansson91/mallar/mallar-fe
-          dockerfile: Dockerfile.prod
-          tags: latest
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: whoami
