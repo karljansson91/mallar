@@ -25,4 +25,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             docker pull docker.pkg.github.com/karljansson91/mallar/mallar-fe:latest
+            docker stop mallar-fe
+            docker rm mallar-fe
             docker run --name mallar-fe -p 127.0.0.1:3000:80/tcp -d docker.pkg.github.com/karljansson91/mallar/mallar-fe:latest
