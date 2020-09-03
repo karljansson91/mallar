@@ -18,7 +18,7 @@ const App = () => {
         <Router>
             <Switch>
                     <Route path="/" exact={true}>
-                        <div>hello</div>
+                        <div>hello done</div>
                     </Route>
                     <Route path="/cv" exact={true}>
                         <Cv />
