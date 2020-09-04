@@ -54,7 +54,7 @@ const SignUpImg = styled.img`
 
 const Wrapper = styled.div`
     display: flex;
-    background-color: #D3D3D3;
+    background-color: #F8F9FB;
     align-items: center;
     justify-content: center;
     height: 100vh;

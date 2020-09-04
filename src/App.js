@@ -12,13 +12,14 @@ import { UserContext } from 'context/user'
 import { ExperienceContext } from 'context/experience'
 import { SkillContext } from 'context/skill'
 import { EducationContext } from 'context/education'
+import Home from 'routes/Home'
 
 const App = () => {
     return (
         <Router>
             <Switch>
                     <Route path="/" exact={true}>
-                        <div>hello done</div>
+                        <Home/>
                     </Route>
                     <Route path="/cv" exact={true}>
                         <Cv />
