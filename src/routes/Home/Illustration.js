@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import CvIllustration from 'assets/svg/CvIllustration.svg'
+import { LinkButton } from 'components/Button'
 import { Link } from 'react-router-dom'
-
-
 
 const Wrapper = styled.div`
     display: flex;
@@ -20,22 +19,9 @@ const Text = styled.span`
     margin-top: 24px;
     width: 50%;
 `
-const LinkButton = styled(Link)`
-    margin-top: 24px;
-    padding: 12px;
-    background-color: #0080FF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    &:hover {
-        text-decoration: none;
-        color: white;
-        background-color: #006bff;
-    }
-`
+
 const ButtonWrapper = styled.div`
-    margin-top: 46px;
+    margin-top: 76px;
     width: 50%;
 `
 const InfoBox = styled.div`
