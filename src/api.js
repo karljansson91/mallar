@@ -1,11 +1,10 @@
-import { getCookie, setCookie } from 'utils'
+import { getCookie, setCookie, deleteCookie } from 'utils'
 
 const host = process.env.REACT_APP_API_HOST
 
 
 const tokenFetch = async (path, method, payload) => {
     const cookie = getCookie('mallar')
-    console.log(host)
     const response = await fetch(`${host}${path}`, {
         method: method,
         headers: {
@@ -15,6 +14,8 @@ const tokenFetch = async (path, method, payload) => {
     })
     if (response.status <= 400){
         return await response.json()
+    }else if (response.status === 401){
+        deleteCookie('mallar')
     }
 }
 
@@ -30,7 +31,6 @@ const registerUser = async (email, password) => {
 
 const loginUser = async (username, password) => {
     let formData = new FormData();
-    console.log(process.env)
     formData.append('username', username);
     formData.append('password', password);
 

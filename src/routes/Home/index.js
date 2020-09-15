@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Header from './Header'
 import Illustration from './Illustration'
 import About from './About'
 import Question from './Questions'
@@ -18,7 +17,6 @@ export default () => {
  
     return (
         <Wrapper>
-            <Header/>
             <Illustration/>
             <About/>
             <Question/>

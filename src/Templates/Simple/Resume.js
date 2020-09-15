@@ -85,7 +85,7 @@ const Resume = () => {
 
     return (
         <PDFViewer style={styles.document}>
-            <Document>
+            <Document style={styles.document}>
                 <Page size="A4" style={styles.page}>
                     <Header 
                         name={name || undefined}
