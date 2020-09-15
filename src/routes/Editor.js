@@ -66,7 +66,6 @@ export default ({match}) => {
         // Create an scoped async function in the hook
         const fetchData = async () => {
             const data = await fetchCvData(CvId)
-            console.log(data)
             userDispatch({
                 type: 'update',
                 payload: {

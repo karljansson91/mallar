@@ -78,10 +78,6 @@ export default () => {
         fetchData();
     }, []);
 
-    const addCv = async () => {
-        await createCv()
-    }
-
     const editCv = (CvId) => {
         history.push(`cv/edit/${CvId}`)
     }
@@ -89,12 +85,8 @@ export default () => {
     return (
         <Wrapper>
             <CvBoard>
-                <h4>Dina CV</h4>
+                <h4>Ditt CV</h4>
                 <CardWrapper>
-                    <CvCard color="#BADFE7" onClick={addCv}>
-                        <Plus fill={"white"}/>
-                        Skapa nytt cv
-                    </CvCard>
                     {cvs.map((cv) => 
                         <CvCard key={cv.cv_id} color="#6FB3B8" onClick={() => editCv(cv.cv_id)}>
                             <Preview cvInfo={cv}/>

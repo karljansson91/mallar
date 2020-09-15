@@ -1,4 +1,4 @@
-function setCookie(name,value,days) {
+const setCookie = (name,value,days) => {
     const json_value = JSON.stringify(value)
     var expires = "";
     if (days) {
@@ -9,7 +9,7 @@ function setCookie(name,value,days) {
     document.cookie = name + "=" + (json_value || "")  + expires + "; path=/";
 }
 
-function getCookie(name) {
+const getCookie = (name) => {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
@@ -19,8 +19,14 @@ function getCookie(name) {
     }
     return null;
 }
-function deleteCookie(name) {   
+
+const deleteCookie = (name) => {   
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-export { setCookie, getCookie, deleteCookie }
+const isLogin = () => {
+    const logginCookie = getCookie("mallar")
+    return logginCookie ? true : false
+}
+
+export { setCookie, getCookie, deleteCookie, isLogin }
